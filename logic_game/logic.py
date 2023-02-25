@@ -5,13 +5,7 @@ PAPER: str = 'Бумага'
 SCISSORS: str = 'Ножницы'
 
 def spin_random_wheel() -> str:
-    option: int = random.randint(1,3)
-    if option == 1:
-        return STONE
-    elif option == 2:
-        return PAPER
-    else:
-        return SCISSORS
+    return random.choice([SCISSORS, PAPER, STONE])
 
 def compare_option(player: str, random_option: str) -> bool | None:
     player = player.capitalize()
